@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PPF — Personal · Professional · Financial</title>
+<meta name="description" content="Bolor's three pillars: Personal, Professional, Financial.">
+<style>
+  :root{
+    --bg:#0c0e12; --panel:#14171e; --panel2:#191d26; --line:#262b36;
+    --text:#f2f4f8; --dim:#9aa3b2; --faint:#6b7280;
+    --personal:#e8c15a; --professional:#5aa9e8; --financial:#5ae8a0;
+    --warn:#e85a5a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;line-height:1.5;padding:28px 18px 48px}
+  .wrap{max-width:1180px;margin:0 auto}
+  header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:14px;padding:10px 2px 26px;border-bottom:1px solid var(--line)}
+  .brand h1{font-size:clamp(64px,11vw,124px);font-weight:800;letter-spacing:-.03em;line-height:.95}
+  .brand h1 .dot{color:var(--faint)}
+  .brand p{color:var(--dim);font-size:clamp(15px,2.4vw,19px);margin-top:8px;letter-spacing:.01em}
+  .brand p b{color:var(--text);font-weight:600}
+  .stamp{text-align:right;color:var(--faint);font-size:13px;line-height:1.6}
+  .stamp b{color:var(--dim);font-weight:600}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+  @media (max-width:900px){.grid{grid-template-columns:1fr}.stamp{text-align:left}}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px 22px 20px;display:flex;flex-direction:column;gap:16px}
+  .card .kicker{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+  .card h2{font-size:22px;font-weight:700;letter-spacing:-.01em;margin-top:2px}
+  .card .sub{color:var(--dim);font-size:14px;margin-top:2px}
+  .p-personal .kicker{color:var(--personal)} .p-professional .kicker{color:var(--professional)} .p-financial .kicker{color:var(--financial)}
+  .big{font-size:clamp(44px,5vw,58px);font-weight:800;letter-spacing:-.02em;line-height:1}
+  .big small{display:block;font-size:13px;font-weight:600;color:var(--dim);letter-spacing:.04em;text-transform:uppercase;margin-bottom:6px}
+  .rows{border-top:1px solid var(--line)}
+  .row{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
+  .row:last-child{border-bottom:none}
+  .row .k{color:var(--dim)}
+  .row .v{font-weight:600;text-align:right}
+  .row .v.warn{color:var(--warn)}
+  .next{margin-top:auto;background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:13px 14px}
+  .next .nk{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:4px}
+  .next .nv{font-size:15px;font-weight:600}
+  .onlyyou{list-style:none}
+  .onlyyou li{font-size:14px;padding:7px 0;border-bottom:1px solid var(--line);display:flex;gap:9px}
+  .onlyyou li:last-child{border-bottom:none}
+  .onlyyou .tag{flex:none;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#0c0e12;background:var(--professional);border-radius:5px;padding:2px 6px;height:fit-content;margin-top:2px}
+  .onlyyou .due{color:var(--warn);font-weight:600;white-space:nowrap}
+  .sec-label{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+  footer{margin-top:26px;color:var(--faint);font-size:13px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <h1>PPF<span class="dot">.</span></h1>
+      <p><b>Personal</b> · <b>Professional</b> · <b>Financial</b> — the three pillars, one page.</p>
+    </div>
+    <div class="stamp">
+      <b>Bolorerdene Bundgaa</b><br>
+      As of Sunday, Nov 1, 2026 — evening<br>
+      Private dashboard. No client data.
+    </div>
+  </header>
+
+  <div class="grid">
+
+    <!-- PERSONAL -->
+    <section class="card p-personal">
+      <div>
+        <div class="kicker">01 — Personal</div>
+        <h2>Fit, calm, free of the past</h2>
+        <div class="sub">Body and head. Steady training, lower daily stress, old weight left behind.</div>
+      </div>
+      <div class="big"><small>Sessions on record</small>None yet</div>
+      <div class="rows">
+        <div class="row"><span class="k">Training</span><span class="v">Gym · Chantilly MMA / judo</span></div>
+        <div class="row"><span class="k">Sessions logged</span><span class="v warn">0 — log is empty</span></div>
+        <div class="row"><span class="k">Stress</span><span class="v">Up — money and job pressure</span></div>
+      </div>
+      <div class="next">
+        <div class="nk">Next action</div>
+        <div class="nv">Get one session in this week — gym or Chantilly — and it goes on this card.</div>
+      </div>
+    </section>
+
+    <!-- PROFESSIONAL -->
+    <section class="card p-professional">
+      <div>
+        <div class="kicker">02 — Professional</div>
+        <h2>Become a Forward Deployed Engineer</h2>
+        <div class="sub">Full-time FDE role, plus an FDE service through Photoxpedia Studio. The main target — everything else is addition.</div>
+      </div>
+      <div class="big"><small>Applications submitted</small>184</div>
+      <div class="rows">
+        <div class="row"><span class="k">Build / FDE</span><span class="v">93</span></div>
+        <div class="row"><span class="k">Product Design</span><span class="v">83</span></div>
+        <div class="row"><span class="k">UI-UX · WordPress</span><span class="v">7 · 1</span></div>
+        <div class="row"><span class="k">Submitted today</span><span class="v">4 — Nash, Commure, Tribe AI, Sinch</span></div>
+        <div class="row"><span class="k">Interviews</span><span class="v">1 of 10</span></div>
+        <div class="row"><span class="k">Next interview</span><span class="v">Databricks — Thu Nov 5, 11:00 AM ET</span></div>
+        <div class="row"><span class="k">Interview prep</span><span class="v">Wed Nov 4, 6:00 PM ET</span></div>
+      </div>
+      <div>
+        <div class="sec-label" style="margin-bottom:4px">Only you can move these</div>
+        <ul class="onlyyou">
+          <li><span class="tag">You</span><span>Mutual of Omaha questionnaire <span class="due">— due ~Mon Nov 2</span></span></li>
+          <li><span class="tag">You</span><span>IBM assessment <span class="due">— expires Tue Nov 3, ~4:27 PM ET</span></span></li>
+          <li><span class="tag">You</span><span>YC profile — re-upload the FDE v4 CV (a live application points at that profile)</span></li>
+          <li><span class="tag">You</span><span>Pawlicy Advisor — application sits form-complete; CV attach + submit in the open tab</span></li>
+        </ul>
+      </div>
+      <div class="next">
+        <div class="nk">Next action</div>
+        <div class="nv">Waves keep running — Wave 153 is dispositioning 17 more companies tonight.</div>
+      </div>
+    </section>
+
+    <!-- FINANCIAL -->
+    <section class="card p-financial">
+      <div>
+        <div class="kicker">03 — Financial</div>
+        <h2>Stable income, a growing company</h2>
+        <div class="sub">Income he can count on, products live and selling, more than one stream.</div>
+      </div>
+      <div class="big"><small>Target</small>$300 / day</div>
+      <div class="rows">
+        <div class="row"><span class="k">Fixed costs</span><span class="v">~$2,620 / mo</span></div>
+        <div class="row"><span class="k">Ellis House (PS-2026-002)</span><span class="v warn">$1,000 still owed</span></div>
+        <div class="row"><span class="k">Ellis promise</span><span class="v">$200 in November — no date given</span></div>
+        <div class="row"><span class="k">Wells Fargo card</span><span class="v warn">$18,000 at 22% APR</span></div>
+        <div class="row"><span class="k">Citi transfer (0% APR)</span><span class="v">$4,850 approved — not yet initiated</span></div>
+        <div class="row"><span class="k">Products live</span><span class="v">ABP Store · Health Report $99 · Brand Kit $20</span></div>
+        <div class="row"><span class="k">Sales on record</span><span class="v">None yet</span></div>
+        <div class="row"><span class="k">Client outreach</span><span class="v">Paused since Oct 22</span></div>
+      </div>
+      <div class="next">
+        <div class="nk">Next action</div>
+        <div class="nv">Initiate the $4,850 Citi transfer — call 1-800-950-5114. Every month of delay costs ~$89 in interest on that slice alone — the full card burns ~$330 a month.</div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <span>PPF — set Oct 26, 2026. The scoreboard is outcomes: an interview or a dollar.</span>
+    <span>ppf.onabp.com</span>
+  </footer>
+</div>
+</body>
+</html>
